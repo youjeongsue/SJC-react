@@ -1,0 +1,61 @@
+.main {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url('../../static/images/main-background.png');
+}
+
+.pSection {
+    width: 300px;
+    padding: 200px 0 30px 30px;
+}
+
+.pStyle {
+    color: white;
+    font-size: 50px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.loginSection{
+    overflow: hidden;
+    padding: 0;
+}
+
+.p {
+    background-color: #17b0bb85;
+}
+
+.p:hover {
+    background-color: #17b0bb85;
+}
+
+.s {
+    background-color: #9a5ce585;
+}
+
+.s:hover {
+    background-color: #9a5ce585;
+}
+
+.temp{
+    overflow: hidden;
+}
+
+.login {
+    width: 50vw;
+    padding: 20px 50px;
+    float: left;
+}
+
+.input-form {
+    float: left;
+    width: 290px;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.input-button {
+    width: 80px;
+    height: 90px;
+    margin-left: 10px;
+}

@@ -37,7 +37,8 @@ class Header extends Component {
             <div className="ui inverted menu" style={{
                     borderRadius: '0',
                     backgroundColor: 'white',
-                    margin: '8px 0'}}>
+                    padding: '5px 0',
+                    margin: '0'}}>
                 <Link to='/' className='header item' style={{color: 'black'}}>
                     <img src={logo}/>SJC</Link>
                 {isAuthenticated ? userLinks : guestLinks}

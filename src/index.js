@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import Root from './client/Root';
 
 import 'semantic-ui-css/semantic.min.css';
+import './static/anicollection.css';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Root />, document.getElementById('root'));

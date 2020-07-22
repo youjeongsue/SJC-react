@@ -18,6 +18,14 @@ import RegisterForm from '../components/auth/RegisterForm';
 class App extends Component {
   componentDidMount(){
     store.dispatch(loadUser());
+
+    const script = document.createElement("script");
+    script.src = "https://anijs.github.io/lib/anijs/anijs-min.js";
+    document.body.appendChild(script);
+
+    const script2 = document.createElement("script");
+    script2.src = "https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js";
+    document.body.appendChild(script2);
   }
 
   render(){
