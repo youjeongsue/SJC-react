@@ -15,14 +15,11 @@ class LoginForm extends Component {
                     ? <i aria-hidden='true' className='user icon' style={{ color: 'white' }}/>
                     : <i aria-hidden='true' className='lock icon' style={{ color: 'white' }}/>}
                 <input {...input} type={type} placeholder={label} style={{
-                        width: '270px',
-                        border: '2px solid white',
-                        borderRadius: '0',
-                        color: 'white',
-                        backgroundColor: 'rgba(0, 0, 0, 0)'}}/>
-                {touched && error && (
-                    <span className='ui pointing red basic label'>{error}</span>
-                )}
+                    width: '270px',
+                    border: '2px solid white',
+                    borderRadius: '0',
+                    color: 'white',
+                    backgroundColor: 'rgba(0, 0, 0, 0)'}}/>
             </div>
         );
     };
@@ -30,7 +27,7 @@ class LoginForm extends Component {
     // login form
     loginRenderField = ({ style }) => {
         return (
-            <div data-anijs="if: click, do: slideInUp animated" className={`${styles['login']} ${styles[style]}`}>
+            <div className={`${style} ${styles['login']} ${styles[style]}`}>
                 <form onSubmit={this.props.handleSubmit(this.onSubmit)} className='ui form'>
                     <div className={ styles['input-form'] }>
                         <Field
@@ -48,7 +45,7 @@ class LoginForm extends Component {
                             type='hidden'
                             component={this.hiddenField} />
                     </div>
-                    {style==='p'
+                    {style==='p-login'
                         ? <button className={`ui primary button ${styles['input-form']} ${styles['input-button']} `}
                             style={{ backgroundColor: '#17B0BB'}}>Login</button>
                         : <button className={`ui primary button ${styles['input-form']} ${styles['input-button']} `}
@@ -84,10 +81,16 @@ class LoginForm extends Component {
                         WHATEVER YOU WANT
                     </p>
                 </div>
-                <div className={ styles['loginSection'] }>
-                    <Field name='p-login' style='p' component={this.loginRenderField} />
-                    <Field name='s-login' style='s' component={this.loginRenderField} />
+                <div className={ styles['loginSection'] } style={{ position: 'relative'}}>
+                    <Field name='p-login' style='p-login' component={this.loginRenderField} />
+                    <Field name='s-login' style='s-login' component={this.loginRenderField} />
                     <div style={{ clear: 'left' }}></div>
+                </div>
+                <div className={ styles['tempSection'] } style={{ position: 'relative', left: '0px', bottom: '0px'}}>
+                    <div data-anijs="if: click, do: slideInUp animated $toggleClass active, to: .p-login;"
+                        className={` ${styles['login-selector']} ${styles['p']}`}>교수자 로그인</div>
+                    <div data-anijs="if: click, do: slideInUp animated $toggleClass active, to: .s-login;"
+                        className={` ${styles['login-selector']} ${styles['s']}`}>학습자 로그인</div>
                 </div>
             </div>
         );

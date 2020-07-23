@@ -21,24 +21,39 @@
     padding: 0;
 }
 
-.p {
-    background-color: #17b0bb85;
+.tempSection{
+    overflow: hidden;
+    padding: 0;
 }
 
-.p:hover {
+.p {
+    background-color: #17b0bb;
+}
+
+.p-login {
     background-color: #17b0bb85;
 }
 
 .s {
+    background-color: #9a5ce5;
+}
+
+.s-login {
     background-color: #9a5ce585;
 }
 
-.s:hover {
-    background-color: #9a5ce585;
+.active {
+    visibility: hidden;
 }
 
-.temp{
-    overflow: hidden;
+.login-selector {
+    width: 50vw;
+    padding: 20px 50px;
+    float: left;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
 }
 
 .login {
