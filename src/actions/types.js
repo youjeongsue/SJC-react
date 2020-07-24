@@ -1,4 +1,4 @@
-//user
+//auth
 export const USER_LOADING = 'USER_LOADING';
 export const USER_LOADED = 'USER_LOADED';
 export const AUTH_ERROR = 'AUTH_ERROR';
@@ -21,3 +21,10 @@ export const GET_ASSIGNMENT = 'GET_ASSIGNMENT';
 export const ADD_ASSIGNMENT = 'ADD_ASSIGNMENT';
 export const DELETE_ASSIGNMENT = 'DELETE_ASSIGNMENT';
 export const EDIT_ASSIGNMENT = 'EDIT_ASSIGNMENT';
+
+//comment
+export const GET_COMMENTS = 'GET_COMMENTS';
+export const GET_COMMENT = 'GET_COMMENT';
+export const ADD_COMMENT = 'ADD_ASSIGNMENT';
+export const DELETE_COMMENT = 'DELETE_COMMENT';
+export const EDIT_COMMENT = 'EDIT_COMMENT';

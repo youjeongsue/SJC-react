@@ -20,7 +20,7 @@ export const getLectures = () => async (dispatch, getState) => {
 };
 
 export const getLecture = (id) => async (dispatch, getState) => {
-    const res = await axios.get(`http://127.0.0.1:8000/dashboard/lectures/${id}/`, tokenConfig(getState));
+    const res = await axios.get(`http://127.0.0.1:8000/dashboard/lecture/${id}/`, tokenConfig(getState));
     dispatch({
         type: GET_LECTURE,
         payload: res.data
@@ -37,7 +37,7 @@ export const addLecture = (formValues) => async (dispatch, getState) => {
 };
 
 export const deleteLecture = id => async (dispatch, getState) => {
-    await axios.delete(`http://127.0.0.1:8000/dashboard/lectures/${id}/`, tokenConfig(getState));
+    await axios.delete(`http://127.0.0.1:8000/dashboard/lecture/${id}/`, tokenConfig(getState));
     dispatch({
         type: DELETE_LECTURE,
         payload: id
@@ -45,7 +45,7 @@ export const deleteLecture = id => async (dispatch, getState) => {
 };
 
 export const editLecture = (id, formValues) => async (dispatch, getState) => {
-    const res = await axios.patch(`http://127.0.0.1:8000/dashboard/lectures/${id}/`, formValues, tokenConfig(getState));
+    const res = await axios.patch(`http://127.0.0.1:8000/dashboard/lecture/${id}/`, formValues, tokenConfig(getState));
     dispatch({
         type: EDIT_LECTURE,
         payload: res.data

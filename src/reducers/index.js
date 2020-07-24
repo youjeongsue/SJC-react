@@ -3,6 +3,8 @@ import { reducer as formReducer } from 'redux-form';
 
 import auth from './auth';
 import lectures from './lectures';
+import assignments from './assignments';
+import comments from './comments';
 
 import { LOGOUT_SUCCESS } from '../actions/types';
 
@@ -15,6 +17,8 @@ import { LOGOUT_SUCCESS } from '../actions/types';
 const appReducer = combineReducers({
     form: formReducer,
     lectures,
+    assignments,
+    comments,
     auth
 });
 
