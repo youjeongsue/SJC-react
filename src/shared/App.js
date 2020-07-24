@@ -36,7 +36,6 @@ class App extends Component {
           <Route path='/edit/:id' component={LectureEdit} />
           <Route path='/register' component={RegisterForm} />
           <Route path='/login' component={LoginForm} />
-          {/* <Route path='/lecture/:id' component={Assignment} /> */}
       </Provider>
     );
   }

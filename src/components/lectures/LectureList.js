@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+
 import { getLectures, deleteLecture } from '../../actions/lectures';
+
+import styles from './LectureList.module.css';
+import folderImg from '../../static/images/folder.png';
 
 class LectureList extends Component {
     componentDidMount(){
@@ -12,21 +16,30 @@ class LectureList extends Component {
         const { user } = this.props.auth;
         
         return (
-            <div className="ui relaxed divided list" style={{ marginTop: '2rem'}}>
-                {this.props.lectures.map(lecture =>(
-                    <div className="item" key={lecture.id}>
-                        <div className='right floated content'>
-                            {user.is_staff === true
-                                ? <Link to={`/edit/${lecture.id}`} className='small ui nagetive basic button'>수정</Link>
-                                : null}
-                            <button onClick={() => this.props.deleteLecture(lecture.id)} className='small ui nagetive basic button'>삭제</button>
+            <div>
+                <div className={ styles['p-wrapper'] }>
+                    <p className={ styles['title'] }>My Class</p>
+                    <div className={ styles['circle'] }></div>
+                </div>
+                <div className="ui relaxed grid">
+                    {this.props.lectures.map(lecture =>(
+                        <div className="ui item" key={lecture.id}>
+                            {/*
+                            TODO: move to lecture page
+                            <div className='right floated content'>
+                                {user.is_staff === true
+                                    ? <Link to={`/edit/${lecture.id}`} className='small ui nagetive basic button'>수정</Link>
+                                    : null}
+                                <button onClick={() => this.props.deleteLecture(lecture.id)} className='small ui nagetive basic button'>삭제</button>
+                            </div> */}
+                            <Link to={`/lecture/${lecture.id}`} className={ styles['item-wrapper'] }>
+                                <div className={ styles['icon'] }>
+                                    <p>{lecture.lecturename}</p>
+                                </div>
+                            </Link>
                         </div>
-                        <i className="large calendar outline middle aligned icon" />
-                        <div className="content">
-                            <Link to={`/lecture/${lecture.id}`} className='header'>{lecture.lecturename}</Link>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         );
     }
