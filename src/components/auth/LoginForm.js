@@ -60,7 +60,6 @@ class LoginForm extends Component {
         return (
             <div className="field">
                 <input type={type}/>
-                {error && <div className='ui red massage'>{error}</div>}
             </div>
         );
     };

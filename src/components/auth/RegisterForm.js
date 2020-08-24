@@ -4,15 +4,14 @@ import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import { register } from '../../actions/auth';
 
+import styles from './RegisterForm.module.css';
+
 class RegisterForm extends Component {
     renderField = ({ input, label, type, meta: { touched, error } }) => {
         return (
             <div className={`field ${touched && error ? 'error' : ''}`}>
                 <label>{label}</label>
                 <input {...input} type={type} />
-                {touched && error && (
-                    <span className="ui pointing red basic label">{error}</span>
-                )}
             </div>
         );
     };
@@ -27,8 +26,8 @@ class RegisterForm extends Component {
             return <Redirect to='/' />;
         }
         return (
-            <div className="ui container">
-                <div className="ui segment">
+            <div className='ui container'>
+                <div className={`ui segment ${styles['form-wrapper']}`}>
                     <form
                         onSubmit={this.props.handleSubmit(this.onSubmit)}
                         className='ui form'>
@@ -36,38 +35,35 @@ class RegisterForm extends Component {
                             name='username'
                             type='text'
                             component={this.renderField}
-                            label='Username'
+                            label='이름'
                             validate={[required, minLength(2), maxLength(15)]} />
                         <Field
                             name='email'
                             type='email'
                             component={this.renderField}
-                            label='Email'
+                            label='이메일'
                             validate={required} />
                         <Field
                             name='password'
                             type='password'
                             component={this.renderField}
-                            label='Password'
+                            label='비밀번호'
                             validate={required} />
                         <Field
                             name='password2'
                             type='password'
                             component={this.renderField}
-                            label='Confirm Password'
+                            label='비밀번호 확인'
                             validate={[required, passwordsMatch]} />
                         <Field
                             name="is_staff"
                             type='checkbox'
                             component={this.renderField}
-                            label='Staff'
-                            validate={required}
+                            label='교수입니까'
+                            validate={required_staff}
                             />
-                        <button className='ui primary button'>Register</button>
+                        <button className={`ui primary button ${styles['r-btn']}`}>가입하기</button>
                     </form>
-                    <p style={{ marginTop: '1rem' }}>
-                        Already have an account? <Link to='/login'>Login</Link>
-                    </p>
                 </div>
             </div>
         );
@@ -75,6 +71,7 @@ class RegisterForm extends Component {
 }
 
 const required = value => (value ? undefined : 'Required');
+const required_staff = value => (value);
 
 const minLength = min => value =>
     value && value.length < min

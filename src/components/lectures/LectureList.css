@@ -1,0 +1,65 @@
+.lecture-list-wrapper {
+    overflow: hidden;
+}
+
+.lecture-list{
+    float: left;
+    width: calc(100vw - 600px);
+    height: calc(100vh - 87px);
+    margin-right: 20px;
+    padding: 50px 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+/* title */
+.title-wrapper {
+    /* margin-bottom: 1rem; */
+    color: white;
+}
+
+.title {
+    display: inline-block;
+    font-size: xx-large;
+}
+
+.title-settings {
+    display: inline-block;
+}
+
+.main-t {
+    margin-right: calc(100vw - 900px);
+    font-weight: 900;
+}
+
+.sub-t {
+    font-size: large;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* list */
+.list-wrapper {
+    background-color: white;
+    height: 480px;
+    padding: 30px 20px;
+}
+
+.item-img {
+    width: 220px;
+    height: 130px;
+    margin-bottom: 8px;
+    background-color: black;
+}
+
+.list-wrapper p {
+    color: black;
+    text-decoration: underline;
+}
+
+
+/* right sidebar */
+.r-sidebar-wrapper {
+    float: left;
+    width: 270px;
+}

@@ -1,0 +1,9 @@
+.form-wrapper {
+    width: 400px;
+    left: calc(50% - 200px);
+    border: none;
+}
+
+.r-btn {
+    background-color: #17b0bb;
+}

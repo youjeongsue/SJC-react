@@ -40,12 +40,8 @@ class Header extends Component {
                     padding: '5px 0',
                     margin: '0'}}>
                 <Link to='/' className='header item' style={{color: 'black'}}>
-                    <img src={logo}/>SJC</Link>
+                    <img src={logo}/></Link>
                 {isAuthenticated ? userLinks : guestLinks}
-                <div className="right menu">
-                    <Link to='/' className='item' style={{color: 'black'}}>공지사항</Link>
-                    <Link to='/' className='item' style={{color: 'black'}}>이용안내</Link>
-                </div>
             </div>
         );
     }

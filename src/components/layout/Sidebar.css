@@ -1,0 +1,51 @@
+.sidebar {
+    height: calc(100vh - 87px);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.s-user {
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #F5F6F7;
+    text-align: center;
+}
+
+.s-user img {
+    width: 80px;
+    height: 80px;
+    margin-top: 40px;
+}
+
+.s-user p {
+    font-weight: bold;
+}
+
+.s-name {
+    margin-top: 20px;
+    font-size: large;
+}
+
+.s-menu {
+    padding: 50px 30px;
+}
+
+.s-menu p {
+    padding: 7px 17px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.s-dashboard {
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    background-color: #17B0BB;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.active {
+    margin-left: 20px;
+    width: 150px;
+}

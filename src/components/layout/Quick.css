@@ -1,0 +1,44 @@
+.quick {
+    width: 240px;
+    height: calc(100vh - 87px);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.icon {
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #F5F6F7;
+    text-align: center;
+}
+
+.icon p {
+    padding-top: 40px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.icon img {
+    width: 160px;
+}
+
+.q-menu {
+    padding: 40px 20px;
+}
+
+.q-item {
+    display: block;
+    margin: 15px 0;
+    padding: 10px 0;
+    width: 200px;
+    height: 40px;
+    color: rgb(50, 50, 50);
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #F5F6F7;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}

@@ -51,7 +51,7 @@ export const loadUser = () => async (dispatch, getState) => {
     }
 };
 
-export const login = ({ username, password }) => async dispatch => {
+export const login = ({ username, password, history }) => async dispatch => {
     const config = {
         headers : {
             'Content-Type': 'application/json'

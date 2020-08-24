@@ -4,24 +4,20 @@ import { connect } from 'react-redux';
 
 import Sidebar from '../layout/Sidebar';
 import LectureList from './LectureList';
-import LectureCreate from './LectureCreate';
+import Room from './Room';
 
-import styles from './Dashboard.module.css';
+import './Dashboard.css';
 
 class Dashboard extends Component {
     render() {
-        const { user } = this.props.auth;
-
         return (
-            <div className='ui'>
-                <div className={ styles['sidebar'] }>
+            <div className='p-dashboard'>
+                <div className='sidebar'>
                     <Sidebar />
                 </div>
-                <div className={ styles['dashboard'] }>
-                    <div className={ styles['dashboard-wrapper'] }>
-                        {/* {user.is_staff === true ? <LectureCreate /> : null} */}
-                        <Route exact path='/' component={LectureList}/>
-                    </div>
+                <div className='dashboard'>
+                    <Route exact path='/' component={LectureList}/>
+                    <Route path='/lecture/:id' component={Room}/>
                 </div>
             </div>
         );

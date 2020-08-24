@@ -1,0 +1,17 @@
+.p-dashboard {
+    overflow: hidden;
+    padding: 20px 30px;
+    background-size: cover;
+    background-image: url('../../static/images/p-dashboard.png');
+}
+
+.sidebar {
+    float: left;
+    width: 200px;
+}
+
+.dashboard {
+    float: left;
+    /* header없애면 바꾸기 */
+    margin-left: 30px;
+}

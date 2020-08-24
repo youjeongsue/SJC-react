@@ -1,0 +1,45 @@
+.rsidebar {
+    width: 240px;
+}
+
+.s-item {
+    padding: 20px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.s-title {
+    font-size: large;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.rsidebar .todo {
+    height: 125px;
+    margin-bottom: 25px;
+}
+
+.todo li {
+    font-size: small;
+}
+
+.assignment li {
+    font-size: small;
+}
+
+.rsidebar .assignment {
+    height: 125px;
+    margin-bottom: 25px;
+}
+
+.rsidebar .schedule {
+    height: 300px;
+}
+
+.schedule img{
+    margin-top: 10px;
+    margin-left: -5px;
+    width: 210px;
+    height: 200px;
+}

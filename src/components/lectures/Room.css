@@ -1,0 +1,38 @@
+.room-wrapper {
+    overflow: hidden;
+}
+
+.assignment-wrapper {
+    float: left;
+    width: calc(100vw - 600px);
+    height: calc(100vh - 87px);
+    margin-right: 20px;
+    padding: 50px 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.a-title {
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.assignment-item {
+    height: 60px;
+    margin-bottom: 15px;
+    padding: 19px 20px;
+    border-radius: 10px;
+    background-color: #DAE3F3;
+}
+
+.assignment-item p{
+    font-size: large;
+    font-weight: bold;
+}
+
+.quick-wrapper {
+    float: left;
+    width: 270px;
+}

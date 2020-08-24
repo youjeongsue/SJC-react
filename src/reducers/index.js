@@ -8,12 +8,6 @@ import comments from './comments';
 
 import { LOGOUT_SUCCESS } from '../actions/types';
 
-// export default combineReducers({
-//     form: formReducer,
-//     lectures,
-//     auth
-// });
-
 const appReducer = combineReducers({
     form: formReducer,
     lectures,

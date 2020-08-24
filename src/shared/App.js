@@ -32,10 +32,10 @@ class App extends Component {
     return (
       <Provider store={store}>
           <Header />
-          <PrivateRoute exact path='/' component={Dashboard} />
+          <PrivateRoute path='/' component={Dashboard} />
           <Route path='/edit/:id' component={LectureEdit} />
           <Route path='/register' component={RegisterForm} />
-          <Route path='/login' component={LoginForm} />
+          <Route exact path='/login' component={LoginForm} />
       </Provider>
     );
   }

@@ -11,7 +11,7 @@ export default (state = {}, action) => {
     switch (action.type){
         case GET_ASSIGNMENTS:
             return {
-                ...state,
+                // ...state,
                 ..._.mapKeys(action.payload, 'id')
             };
         case GET_ASSIGNMENT:
