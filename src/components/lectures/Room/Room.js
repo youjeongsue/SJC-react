@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { getAssignments } from '../../actions/assignments';
+import { getAssignments } from '../../../actions/assignments';
 
-import Quick from '../layout/Quick';
+import Quick from '../../layout/Quick';
 import './Room.css';
+import Lectures from './Lectures';
+import Assignments from './Assignments';
 
 class Room extends Component {
     componentDidMount(){
@@ -14,15 +17,9 @@ class Room extends Component {
     render() {
         return (
             <div className='room-wrapper'>
-                {/* Router 들어갈자리! */}
                 <div className='assignment-wrapper'>
-                    <div className='a-title'>강의실</div>
-                    {this.props.assignments.map(assignment => (
-                        // Link로 바꾸기
-                        <div className='assignment-item' key={assignment.id}>
-                            <p>{assignment.assignmentname}</p>
-                        </div>
-                    ))}
+                    <Route exact path={`/lecture/${this.props.match.params.id}`} component={Lectures}/>
+                    <Route path={`/lecture/${this.props.match.params.id}/assignments`} component={Assignments} />
                 </div>
                 <div className='quick-wrapper'>
                     <Quick id={this.props.match.params.id}/>

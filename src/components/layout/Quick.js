@@ -9,7 +9,7 @@ class Quick extends Component {
         return (
             <div>
                 <div className='quick'>
-                    <div className='icon'>
+                    <div className='q-icon'>
                         <p>Quick Menu</p>
                         <img src={quickImg} />
                     </div>

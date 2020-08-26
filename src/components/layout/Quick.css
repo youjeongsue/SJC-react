@@ -6,7 +6,7 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
-.icon {
+.q-icon {
     height: 250px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -14,13 +14,13 @@
     text-align: center;
 }
 
-.icon p {
+.q-icon p {
     padding-top: 40px;
     font-size: xx-large;
     font-weight: bold;
 }
 
-.icon img {
+.q-icon img {
     width: 160px;
 }
 

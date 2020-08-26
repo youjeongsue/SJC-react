@@ -1,0 +1,13 @@
+.a-btn {
+    font-size: small !important;
+    font-weight: 700;
+    margin-right: 10px;
+    padding: 5px 20px;
+    background-color: #BFBFBF;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    border: none;
+}
+
+.a-main {
+    margin-right: calc(100vw - 1120px);
+}

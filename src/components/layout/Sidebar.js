@@ -21,7 +21,7 @@ class Sidebar extends Component {
                     <p>일정관리</p>
                     <p>메신저</p>
                 </div>
-                <img className='active' src={active} />
+                <img className='active-user' src={active} />
             </div>
         )
     }

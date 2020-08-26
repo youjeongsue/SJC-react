@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import Sidebar from '../layout/Sidebar';
 import LectureList from './LectureList';
-import Room from './Room';
+import Room from './Room/Room';
 
 import './Dashboard.css';
 
