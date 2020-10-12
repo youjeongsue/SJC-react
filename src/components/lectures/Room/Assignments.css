@@ -9,5 +9,62 @@
 }
 
 .a-main {
-    margin-right: calc(100vw - 1120px);
+    margin-right: calc(100vw - 1130px);
+    margin-bottom: 15px;
+}
+
+/* detail */
+.a-detail {
+    margin: 0 -20px;
+    padding: 15px 15px;
+    height: 400px;
+    background-color: white;
+}
+
+.ghost {
+    display: none;
+}
+
+.ghost-margin {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 430px;
+}
+
+/* student image */
+.s-image-router {
+    float: left;
+    width: 400px;
+}
+
+.s-image-router::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.s-image-score {
+    float: left;
+    width: 70px;
+}
+
+.s-image-list {
+    float: left;
+    width: 150px;
+}
+
+.s-path {
+    height: 100px;
+    width: 150px;
+}
+
+.s-score {
+    margin-top: 15px;
+    margin-left: 10px;
+    height: 100px;
+    width: 150px;
+}
+
+.s-image-comment {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }

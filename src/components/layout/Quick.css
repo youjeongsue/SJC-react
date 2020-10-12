@@ -1,5 +1,6 @@
 .quick {
     width: 240px;
+    min-height: 600px;
     height: calc(100vh - 87px);
     background-color: white;
     border-radius: 10px;

@@ -4,8 +4,10 @@
 
 .assignment-wrapper {
     float: left;
+    overflow: auto;
     width: calc(100vw - 600px);
     height: calc(100vh - 87px);
+    min-height: 600px;
     margin-right: 20px;
     padding: 50px 30px;
     background-color: rgba(0, 0, 0, 0.5);

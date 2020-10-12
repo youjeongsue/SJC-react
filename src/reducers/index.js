@@ -4,7 +4,9 @@ import { reducer as formReducer } from 'redux-form';
 import auth from './auth';
 import lectures from './lectures';
 import assignments from './assignments';
-import comments from './comments';
+import pimages from './pimages';
+import simages from './simages';
+import svideos from './svideos';
 
 import { LOGOUT_SUCCESS } from '../actions/types';
 
@@ -12,7 +14,9 @@ const appReducer = combineReducers({
     form: formReducer,
     lectures,
     assignments,
-    comments,
+    pimages,
+    simages,
+    svideos,
     auth
 });
 

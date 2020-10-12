@@ -1,0 +1,47 @@
+.assignment-view-wrapper {
+    margin: -20px -32px -20px 0;
+    padding: 30px 50px;
+    width: calc(100vw - 275px);
+    height: calc(100vh - 49px);
+    background-color: black;
+    overflow: auto;
+}
+
+.assignment-view {
+    width: calc(100vw - 375px);
+}
+
+.a-view-title {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #DAE3F3;
+    min-width: 1000px;
+    height: 60px;
+}
+
+.back-btn {
+    background-color: black;
+    color: white;
+    padding: 5px 5px;
+    width: 20px;
+}
+
+.a-view-video{
+    position: relative;
+    margin-top: -15px;
+    background-color: white;
+    width: calc(100vw - 375px);
+    height: 700px;
+}
+
+.a-view-score {
+    position: relative;
+    left: calc(100vw - 500px);
+    top: -200px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px 10px 10px;
+}

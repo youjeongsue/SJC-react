@@ -10,9 +10,12 @@ import './LectureList.css';
 class LectureList extends Component {
     componentDidMount(){
         this.props.getLectures();
+        // this.getImage();
     }
 
     render() {
+        const { getImage } = this;
+
         return (
             <div className='lecture-list-wrapper'>
                 <div className='lecture-list'>

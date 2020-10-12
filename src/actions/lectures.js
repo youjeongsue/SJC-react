@@ -2,6 +2,7 @@ import axios from 'axios';
 import { reset } from 'redux-form';
 
 import { tokenConfig } from './auth';
+import {ip} from '../settings';
 
 import {
     GET_LECTURES,
@@ -12,7 +13,7 @@ import {
  } from './types';
 
 export const getLectures = () => async (dispatch, getState) => {
-    const res = await axios.get('http://127.0.0.1:8000/dashboard/lectures/', tokenConfig(getState));
+    const res = await axios.get(`${ip}/dashboard/lectures/`, tokenConfig(getState));
     dispatch({
         type: GET_LECTURES,
         payload: res.data.results
@@ -20,7 +21,7 @@ export const getLectures = () => async (dispatch, getState) => {
 };
 
 export const getLecture = (id) => async (dispatch, getState) => {
-    const res = await axios.get(`http://127.0.0.1:8000/dashboard/lecture/${id}/`, tokenConfig(getState));
+    const res = await axios.get(`${ip}/dashboard/lecture/${id}/`, tokenConfig(getState));
     dispatch({
         type: GET_LECTURE,
         payload: res.data
@@ -28,7 +29,7 @@ export const getLecture = (id) => async (dispatch, getState) => {
 };
 
 export const addLecture = (formValues) => async (dispatch, getState) => {
-    const res = await axios.post('http://127.0.0.1:8000/dashboard/lectures/', {...formValues}, tokenConfig(getState));
+    const res = await axios.post(`${ip}/dashboard/lectures/`, {...formValues}, tokenConfig(getState));
     dispatch({
         type: ADD_LECTURE,
         payload: res.data
@@ -37,7 +38,7 @@ export const addLecture = (formValues) => async (dispatch, getState) => {
 };
 
 export const deleteLecture = id => async (dispatch, getState) => {
-    await axios.delete(`http://127.0.0.1:8000/dashboard/lecture/${id}/`, tokenConfig(getState));
+    await axios.delete(`${ip}/dashboard/lecture/${id}/`, tokenConfig(getState));
     dispatch({
         type: DELETE_LECTURE,
         payload: id
@@ -45,7 +46,7 @@ export const deleteLecture = id => async (dispatch, getState) => {
 };
 
 export const editLecture = (id, formValues) => async (dispatch, getState) => {
-    const res = await axios.patch(`http://127.0.0.1:8000/dashboard/lecture/${id}/`, formValues, tokenConfig(getState));
+    const res = await axios.patch(`${ip}/dashboard/lecture/${id}/`, formValues, tokenConfig(getState));
     dispatch({
         type: EDIT_LECTURE,
         payload: res.data

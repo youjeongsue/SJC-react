@@ -1,0 +1,7 @@
+.webcam {
+    /* background-color: white; */
+    width: calc((100vw - 375px)/2);
+    min-width: 500px;
+    height: 700px;
+    margin-top: -15px;
+}

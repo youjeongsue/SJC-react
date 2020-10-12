@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { stopSubmit } from 'redux-form';
+import {ip} from '../settings';
 
 import {
     USER_LOADING,
@@ -22,7 +23,7 @@ export const register = ({ username, email, password, is_staff }) => async dispa
     const body = JSON.stringify({ username, email, password, is_staff });
 
     try{
-        const res = await axios.post('http://127.0.0.1:8000/api/auth/register/', body, config);
+        const res = await axios.post(`${ip}/api/auth/register/`, body, config);
         dispatch({
             type: REGISTER_SUCCESS,
             payload: res.data
@@ -39,7 +40,7 @@ export const loadUser = () => async (dispatch, getState) => {
     dispatch({ type: USER_LOADING });
 
     try {
-        const res = await axios.get('http://127.0.0.1:8000/api/auth/user/', tokenConfig(getState));
+        const res = await axios.get(`${ip}/api/auth/user/`, tokenConfig(getState));
         dispatch({
             type: USER_LOADED,
             payload: res.data
@@ -62,7 +63,7 @@ export const login = ({ username, password, history }) => async dispatch => {
     const body = JSON.stringify({ username, password });
 
     try{
-        const res = await axios.post('http://127.0.0.1:8000/api/auth/login/', body, config);
+        const res = await axios.post(`${ip}/api/auth/login/`, body, config);
         dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data
@@ -76,7 +77,7 @@ export const login = ({ username, password, history }) => async dispatch => {
 };
 
 export const logout = () => async (dispatch, getState) => {
-    await axios.post('http://127.0.0.1:8000/api/auth/logout/', null, tokenConfig(getState));
+    await axios.post(`${ip}/api/auth/logout/`, null, tokenConfig(getState));
     dispatch({
         type: LOGOUT_SUCCESS
     });

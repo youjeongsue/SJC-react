@@ -40,8 +40,9 @@
 
 /* list */
 .list-wrapper {
+    min-height: 600px;
+    height: calc(100vh - 250px);
     background-color: white;
-    height: 480px;
     padding: 30px 20px;
 }
 

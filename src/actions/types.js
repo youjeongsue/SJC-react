@@ -22,9 +22,23 @@ export const ADD_ASSIGNMENT = 'ADD_ASSIGNMENT';
 export const DELETE_ASSIGNMENT = 'DELETE_ASSIGNMENT';
 export const EDIT_ASSIGNMENT = 'EDIT_ASSIGNMENT';
 
-//comment
-export const GET_COMMENTS = 'GET_COMMENTS';
-export const GET_COMMENT = 'GET_COMMENT';
-export const ADD_COMMENT = 'ADD_ASSIGNMENT';
-export const DELETE_COMMENT = 'DELETE_COMMENT';
-export const EDIT_COMMENT = 'EDIT_COMMENT';
+//student image
+export const GET_PIMAGES = 'GET_PIMAGES';
+export const GET_PIMAGE = 'GET_PIMAGE';
+export const ADD_PIMAGE = 'ADD_PIMAGE';
+export const DELETE_PIMAGE = 'DELETE_PIMAGE';
+export const EDIT_PIMAGE = 'EDIT_PIMAGE';
+
+//student video
+export const GET_SVIDEOS = 'GET_SVIDEOS';
+export const GET_SVIDEO = 'GET_SVIDEO';
+export const ADD_SVIDEO = 'ADD_SVIDEO';
+export const DELETE_SVIDEO = 'DELETE_SVIDEO';
+export const EDIT_SVIDEO = 'EDIT_SVIDEO';
+
+//student image
+export const GET_SIMAGES = 'GET_SIMAGES';
+export const GET_SIMAGE = 'GET_SIMAGE';
+export const ADD_SIMAGE = 'ADD_SIMAGE';
+export const DELETE_SIMAGE = 'DELETE_SIMAGE';
+export const EDIT_SIMAGE = 'EDIT_SIMAGE';

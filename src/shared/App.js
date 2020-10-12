@@ -26,6 +26,11 @@ class App extends Component {
     const script2 = document.createElement("script");
     script2.src = "https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js";
     document.body.appendChild(script2);
+
+    const script3 = document.createElement("script");
+    script2.src = "https://apis.google.com/js/client.js";
+    document.body.appendChild(script3);
+    
   }
 
   render(){

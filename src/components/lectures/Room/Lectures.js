@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import './Lectures.css';
@@ -11,7 +12,17 @@ class Lectures extends Component {
                 {this.props.assignments.map(assignment => (
                     // Link로 바꾸기
                     <div className='assignment-item' key={assignment.id}>
-                        <p>{assignment.assignmentname}</p>
+                        <p className='title-settings a-main' style={{ marginRight: 'calc(100vw - 1000px)'}}>{assignment.assignmentname}</p>
+                        <div className='title-settings'>
+                            <Link to={{
+                                pathname : '/assignment/view',
+                                state : {
+                                    assignment : assignment
+                                }
+                            }}>
+                                <button className='title-settings a-btn'>강의 보기</button>
+                            </Link>
+                        </div>
                     </div>
                 ))}
             </div>
