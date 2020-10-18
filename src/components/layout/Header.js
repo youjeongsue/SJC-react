@@ -14,7 +14,7 @@ class Header extends Component {
                     {user ? user.username : ''}
                     <i className='dropdown icon' />
                     <div className="menu">
-                        <a onClick={this.props.logout} className='item'>
+                        <a href="/" onClick={this.props.logout} className='item'>
                             Logout
                         </a>
                     </div>
@@ -40,7 +40,7 @@ class Header extends Component {
                     padding: '5px 0',
                     margin: '0'}}>
                 <Link to='/' className='header item' style={{color: 'black'}}>
-                    <img src={logo}/></Link>
+                    <img src={logo} alt=""/></Link>
                 {isAuthenticated ? userLinks : guestLinks}
             </div>
         );

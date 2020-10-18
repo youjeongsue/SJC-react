@@ -19,7 +19,7 @@ class RSidebar extends Component {
                 </div>
                 <div className='s-item schedule'>
                     <div className='s-title'>SCHEDULE</div>
-                    <img src={img}/>
+                    <img src={img} alt=""/>
                 </div>
             </div>
         )

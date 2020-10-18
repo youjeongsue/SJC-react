@@ -11,7 +11,7 @@ class Quick extends Component {
                 <div className='quick'>
                     <div className='q-icon'>
                         <p>Quick Menu</p>
-                        <img src={quickImg} />
+                        <img src={quickImg} alt=""/>
                     </div>
                     <div className='q-menu'>
                         <Link className='q-item' to={`/lecture/${this.props.id}`}>강의실</Link>

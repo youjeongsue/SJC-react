@@ -5,6 +5,7 @@ import { tokenConfig } from './auth';
 import {ip} from '../settings';
 
 import {
+    GET_SVIDEOS,
     GET_SVIDEO,
     ADD_SVIDEO,
     DELETE_SVIDEO,
@@ -12,10 +13,10 @@ import {
 } from './types';
 
 export const getSVideos = (assignment_id) => async (dispatch, getState) => {
-    const res = await axios.get(`${ip}/dashboard/svideo/${assignment_id}/`, tokenConfig(getState));
+    const res = await axios.get(`${ip}/dashboard/svideos/${assignment_id}/`, tokenConfig(getState));
     dispatch({
         type: GET_SVIDEOS,
-        payload: res.data
+        payload: res.data.results
     });
 };
 
@@ -27,8 +28,9 @@ export const getSVideo = (id) => async (dispatch, getState) => {
     });
 };
 
-export const addSVideo = (formValues) => async (dispatch, getState) => {
-    const res = await axios.post(`${ip}/dashboard/svideo/`, {...formValues}, tokenConfig(getState));
+export const addSVideo = (formValues, assignment_id) => async (dispatch, getState) => {
+    console.log(formValues);
+    const res = await axios.post(`${ip}/dashboard/svideos/${assignment_id}/`, {...formValues}, tokenConfig(getState));
     dispatch({
         type: ADD_SVIDEO,
         payload: res.data

@@ -11,3 +11,7 @@
 .s-video-p {
     width: 150px;
 }
+
+.hidden-field {
+    display: none;
+}

@@ -1,0 +1,14 @@
+.eval-student {
+    color: white;
+    margin-left: calc(100vw - 1000px);
+    font-size: large;
+    font-weight: 600;
+}
+
+.eval-detail-wrapper {
+    padding: 20px;
+    min-height: 500px;
+    height: 500px;
+    overflow-y: auto;
+    background-color: white;
+}

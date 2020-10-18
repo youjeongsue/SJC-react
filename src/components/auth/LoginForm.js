@@ -25,9 +25,9 @@ class LoginForm extends Component {
     };
 
     // login form
-    loginRenderField = ({ style }) => {
+    loginRenderField = ({ style_code }) => {
         return (
-            <div className={`${style} ${styles['login']} ${styles[style]}`}>
+            <div className={`${style_code} ${styles['login']} ${styles[style_code]}`}>
                 <form onSubmit={this.props.handleSubmit(this.onSubmit)} className='ui form'>
                     <div className={ styles['input-form'] }>
                         <Field
@@ -45,7 +45,7 @@ class LoginForm extends Component {
                             type='hidden'
                             component={this.hiddenField} />
                     </div>
-                    {style==='p-login'
+                    {style_code==='p-login'
                         ? <button className={`ui primary button ${styles['input-form']} ${styles['input-button']} `}
                             style={{ backgroundColor: '#17B0BB'}}>Login</button>
                         : <button className={`ui primary button ${styles['input-form']} ${styles['input-button']} `}
@@ -81,8 +81,8 @@ class LoginForm extends Component {
                     </p>
                 </div>
                 <div className={ styles['loginSection'] } style={{ position: 'relative'}}>
-                    <Field name='p-login' style='p-login' component={this.loginRenderField} />
-                    <Field name='s-login' style='s-login' component={this.loginRenderField} />
+                    <Field name='p-login' style_code='p-login' component={this.loginRenderField} />
+                    <Field name='s-login' style_code='s-login' component={this.loginRenderField} />
                     <div style={{ clear: 'left' }}></div>
                 </div>
                 <div className={ styles['tempSection'] } style={{ position: 'relative', left: '0px', bottom: '0px'}}>

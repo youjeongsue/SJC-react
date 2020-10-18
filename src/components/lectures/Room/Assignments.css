@@ -1,7 +1,7 @@
 .a-btn {
     font-size: small !important;
     font-weight: 700;
-    margin-right: 10px;
+    margin-left: 10px;
     padding: 5px 20px;
     background-color: #BFBFBF;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
@@ -11,6 +11,16 @@
 .a-main {
     margin-right: calc(100vw - 1130px);
     margin-bottom: 15px;
+}
+
+.prof-main {
+    margin-right: calc(100vw - 1000px);
+    margin-bottom: 15px;
+}
+
+.a-attendance {
+    margin-left: 40px;
+    margin-right: 20px;
 }
 
 /* detail */

@@ -4,8 +4,6 @@ import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { getSImages } from '../../../actions/simage';
-
 import './Assignments.css';
 import StudentImage from './StudentImage';
 
@@ -78,7 +76,7 @@ class Assignments extends Component {
                                             image_path: image_path
                                         }
                                     }}>
-                                        <img className='s-path' src={`https://storage.googleapis.com/1ok_demo/${image_path}`}></img>
+                                        <img className='s-path' src={`https://storage.googleapis.com/1ok_demo/${image_path}`} alt=""/>
                                     </Link>
                                 ))}
                             </div>
@@ -109,7 +107,6 @@ class Assignments extends Component {
             <div>
                 <div className='a-title'>과제 및 평가</div>
                 {this.props.assignments.map((assignment, index) => (
-                    // Link로 바꾸기
                     <div className={'assignment-item ' + determineStyle2(index)} key={assignment.id}>
                         <p className='title-settings a-main'>{assignment.assignmentname}</p>
                         <div className='title-settings'>

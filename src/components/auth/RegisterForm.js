@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import { register } from '../../actions/auth';
@@ -18,7 +18,6 @@ class RegisterForm extends Component {
 
     onSubmit = formValues => {
         this.props.register(formValues);
-        console.log(formValues);
     };
 
     render() {

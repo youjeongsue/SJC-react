@@ -12,7 +12,7 @@ class Sidebar extends Component {
         return (
             <div className='sidebar'>
                 <div className='s-user'>
-                    <img src={img} />
+                    <img src={img} alt=""/>
                     <p className='s-name'>{user.username}</p>
                     <p>{user.email}</p>
                 </div>
@@ -21,7 +21,7 @@ class Sidebar extends Component {
                     <p>일정관리</p>
                     <p>메신저</p>
                 </div>
-                <img className='active-user' src={active} />
+                <img className='active-user' src={active} alt=""/>
             </div>
         )
     }

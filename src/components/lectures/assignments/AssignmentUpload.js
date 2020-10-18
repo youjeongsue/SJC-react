@@ -1,5 +1,10 @@
-import React, { useRef, useState, useCallback } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import { Field, reduxForm } from 'redux-form';
 import Webcam from 'react-webcam';
+
+import AssignmentUploadForm from './AssignmentUploadForm';
+import { addSVideo } from '../../../actions/svideo';
 
 import './AssignmentUpload.css';
 
@@ -60,6 +65,11 @@ function AssignmentUpload(props){
         props.history.goBack();
     };
 
+    const handleSubmit = formValues => {
+      console.log(formValues);
+      props.addSVideo(formValues, assignment.id);
+    }
+
     return (
         <div>
             <div className='assignment-view-wrapper'>
@@ -74,10 +84,13 @@ function AssignmentUpload(props){
                             )}
                             <button className='title-settings a-btn' onClick={handleDownload}>다운로드</button>
                             <button className='title-settings a-btn'>재생</button>
-                            <label className='title-settings a-btn' >
-                              <input type='file' onChange={(e) => setFile(e.target.value)}/>
-                            </label>
-                            <button className='title-settings a-btn'>업로드</button>
+                            <AssignmentUploadForm destroyOnUnmount={false} onSubmit={handleSubmit} student={props.auth.user.id} assignment={assignment.id}/>
+                            {/* <form className='title-settings' onSubmit={handleSubmit(onMySubmit)}>
+                              <Field name='student' component={hiddenRenderField} input_value={props.auth.user.id} />
+                              <Field name='assignment' component={hiddenRenderField} input_value={assignment.id} />
+                              <Field name='s_video' component={renderField} />
+                              <button className='title-settings a-btn' type="submit">업로드</button>
+                            </form> */}
                             <button className='title-settings a-btn back-btn' onClick={() => goBack()}>X</button>
                         </div>
                     </div>
@@ -89,8 +102,10 @@ function AssignmentUpload(props){
     );
 }
 
-// const mapStateToProps = state => ({
-//     auth: state.auth
-// });
+const mapStateToProps = (state) => ({
+  auth : state.auth
+});
 
-export default AssignmentUpload;
+export default reduxForm({
+  form: 'svideoForm',
+})(connect(mapStateToProps, {addSVideo})(AssignmentUpload));

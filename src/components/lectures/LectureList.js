@@ -10,12 +10,9 @@ import './LectureList.css';
 class LectureList extends Component {
     componentDidMount(){
         this.props.getLectures();
-        // this.getImage();
     }
 
     render() {
-        const { getImage } = this;
-
         return (
             <div className='lecture-list-wrapper'>
                 <div className='lecture-list'>
@@ -31,7 +28,7 @@ class LectureList extends Component {
                             {this.props.lectures.map(lecture =>(
                                 <div className="ui item" key={lecture.id}>
                                     <Link to={`/lecture/${lecture.id}`}>
-                                        <img className='item-img' src={lecture.image}></img>
+                                        <img className='item-img' src={lecture.image} alt=""/>
                                         <p>{lecture.lecturename}</p>
                                     </Link>
                                 </div>
