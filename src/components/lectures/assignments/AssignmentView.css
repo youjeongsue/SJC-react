@@ -45,3 +45,9 @@
     background-color: white;
     border-radius: 10px 10px 10px;
 }
+
+.a-view-score div {
+    margin-top: 20px;
+    font-size: xx-large;
+    color: red;
+}

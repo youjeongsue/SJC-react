@@ -34,6 +34,10 @@
     background-color: #17b0bb85;
 }
 
+.s-login input {
+    color: transparent !important;
+}
+
 .s {
     background-color: #9a5ce5;
 }
@@ -44,6 +48,10 @@
 
 .active {
     visibility: hidden;
+}
+
+.trans {
+    color: transparent;
 }
 
 .login-selector {

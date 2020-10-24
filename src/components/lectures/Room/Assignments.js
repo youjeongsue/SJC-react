@@ -47,6 +47,14 @@ class Assignments extends Component {
         });
     }
 
+    mean = () => {
+        var mean = 0;
+        for(var i=0; i < this.state.s_jsons[this.state.selected+1]['capscore_list'].length; i++){
+            mean += this.state.s_jsons[this.state.selected+1]['capscore_list'][i]['Total_Score']
+        }
+        return (mean/this.state.s_jsons[this.state.selected+1]['capscore_list'].length).toFixed(2);
+    }
+
     handleChange = (index) => {
         const newSelected = this.state.selected === index ? null : index;
         this.setState({ selected : newSelected });
@@ -67,13 +75,15 @@ class Assignments extends Component {
                 {this.state.s_jsons[this.state.selected+1]
                     ? <div>
                         <div>
+                            <div>전체 정확도 :  <span style={{ color: 'red' }}>{this.mean()}%</span></div>
                             <div className='s-image-list'>
                                 <div>정확도 측정시점</div>
                                 {this.state.s_jsons[this.state.selected+1]['cap_list'].map((image_path, index) =>(
                                     <Link key={index} to={{
                                         pathname: `${this.props.match.url}/studentImage/${index}`,
                                         state: {
-                                            image_path: image_path
+                                            image_path: image_path,
+                                            index : this.state.selected
                                         }
                                     }}>
                                         <img className='s-path' src={`https://storage.googleapis.com/1ok_demo/${image_path}`} alt=""/>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import './AssignmentView.css';
 
@@ -18,10 +19,11 @@ class AssignmentView extends Component {
             <div className='assignment-view-wrapper'>
                 <div className='assignment-view'>
                     <div className='assignment-item a-view-title'>
-                        <p className='title-settings a-main' style={{ marginRight: 'calc(100vw - 1020px)'}}>{assignment.assignmentname}</p>
+                        <p className='title-settings a-main' style={{ marginRight: 'calc(100vw - 1200px)'}}>{assignment.assignmentname}</p>
                         <div className='title-settings'>
-                            <button className='title-settings a-btn'>불러오기</button>
-                            <button className='title-settings a-btn'>중간저장</button>
+                            {this.props.auth.user.is_staff === true
+                                ? <input className='title-settings a-btn' type='file'></input>
+                                : null}
                             <button className='title-settings a-btn'>업로드</button>
                             <button className='title-settings a-btn'>정확도</button>
                             <button className='title-settings a-btn back-btn' onClick={() => this.goBack()}>X</button>
@@ -37,5 +39,10 @@ class AssignmentView extends Component {
         );
     }
 }
+const mapStateToProps = state => ({
+    auth: state.auth
+});
 
-export default AssignmentView;
+export default connect(
+    mapStateToProps,
+)(AssignmentView);

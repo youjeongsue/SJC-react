@@ -22,6 +22,14 @@ class AssignmentEval extends Component {
         this.props.getSVideos(this.state.assignment_id);
     }
 
+    mean = (student) => {
+        var mean = 0;
+        for(var i=0; i < this.state.result_json[student]['capscore_list'].length; i++){
+            mean += this.state.result_json[student]['capscore_list'][i]['Total_Score']
+        }
+        return (mean/this.state.result_json[student]['capscore_list'].length).toFixed(2);
+    }
+
     render () {
         const {
             stud_json,
@@ -35,7 +43,7 @@ class AssignmentEval extends Component {
                     <div className='assignment-item' key={student}>
                         <p className='title-settings a-main'>{stud_json[student]['username']}</p>
                         {result_json[student]
-                            ? <div className='title-settings eval-score'>{result_json[student]['dtw_score']['Total_Score'].toFixed(2)}%</div>
+                            ? <div className='title-settings eval-score'>{this.mean(student)}%</div>
                             : <div className='title-settings eval-score'>미제출</div>}
                         <div className='title-settings'>
                             <Link to={{
